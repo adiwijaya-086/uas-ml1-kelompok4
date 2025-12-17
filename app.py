@@ -157,6 +157,35 @@ if menu == "Beranda":
     st.write("Mengelompokkan kabupaten/kota di Jawa Barat berdasarkan karakteristik pengelolaan sampah menggunakan **K-Means Clustering**.")
     st.markdown("### ⚙️ Metodologi")
     st.write("- Normalisasi data (StandardScaler)\n- Reduksi dimensi menggunakan PCA\n- Clustering menggunakan K-Means\n- Visualisasi spasial menggunakan peta interaktif")
+    st.markdown("### 📰 Berita Terkini")
+
+    berita = [
+        {
+            "judul": "Volume Sampah di Jawa Barat Tembus 29 Ribu Ton per Hari, Jadi Tantangan Besar Pengelolaan",
+            "img": "https://asset.kompas.com/crops/LzE1yzwz7Lhg7HJTiv5KvswqCy8=/0x0:0x0/1200x800/data/photo/2025/07/31/688b7374ce1dc.jpeg",
+            "ringkasan": "Sampah di Jawa Barat kini mencapai sekitar 29 ribu ton per hari, menuntut solusi pengelolaan yang lebih efektif..",
+            "url": "https://www.bing.com/ck/a?!&&p=1bb5867cad6c24dd1f64a3ea4b671b90d5fec93cc9d617664a5678c3609bb535JmltdHM9MTc2NTkyOTYwMA&ptn=3&ver=2&hsh=4&fclid=184463fe-eb14-6ea0-172b-7078ea496fe0&psq=Sekda+Jabar+ungkap+timbunan+sampah+mencapai+29%2c7+ribu+ton+per+hari.&u=a1aHR0cHM6Ly9iYW5kdW5nLmtvbXBhcy5jb20vcmVhZC8yMDI1LzA4LzAxLzA1NDAwMzM3OC91bmdrYXAtc2FtcGFoLWRpLWphYmFyLXRlbWJ1cy0yOS1yaWJ1LXRvbi1wZXItaGFyaS1zZWtkYS15YW5nLW1lbnllZGloa2FuIzp-OnRleHQ9U1VLQUJVTUklMkMlMjBLT01QQVMuY29tJTIwLSUyMFNla3JldGFyaXMlMjBEYWVyYWglMjAlMjhTZWtkYSUyOSUyMFByb3ZpbnNpJTIwSmF3YSxKYWJhciUyMHRlbWJ1cyUyMGhpbmdnYSUyMDI5JTIwcmlidSUyMHRvbiUyMHBlciUyMGhhcmlueWEu"
+        },
+        {
+            "judul": "Dedi Mulyadi Turun ke Sungai Cipalabuhan untuk Bersihkan Sampah yang Menyumbat Aliran Air",
+            "img": "https://asset.kompas.com/crops/nxpuRDSR0zaQwsamjWmBFJhj9Nc=/0x0:1280x853/1200x800/data/photo/2025/03/08/67cc48d363b10.jpg",
+            "ringkasan": "Dedi Mulyadi turun langsung ke sungai untuk membersihkan sampah dan menyoroti kerusakan lingkungan di Jawa Barat.",
+            "url": "hhhttps://www.kompas.com/jawa-barat/read/2025/03/08/204314988/turun-ke-sungai-bersihkan-sampah-dedi-mulyadi-hutan-dirusak-malah"
+        },
+        {
+            "judul": "Tingginya Produksi Sampah Harian di Jawa Barat Jadi Tantangan Serius Pengelolaan Lingkungan",
+            "img": "https://images.bisnis.com/posts/2023/05/09/1654204/screenshot_20230509-161253_photopictureresizer_copy_1000x667.jpg",
+            "ringkasan": "Jawa Barat menghasilkan puluhan ribu ton sampah per hari, namun pengelolaannya belum optimal.",
+            "url": "https://bapenda.jabarprov.go.id/2025/10/09/gubernur-jawa-barat-umumkan-pembangunan-pembangkit-listrik-tenaga-sampah-di-seluruh-wilayah-jabar/"
+        }
+    ]
+
+    cols = st.columns(3)
+    for i, b in enumerate(berita):
+        with cols[i % 3]:
+            st.image(b["img"], caption=b["judul"], use_container_width=True)
+            st.write(b["ringkasan"])
+            st.markdown(f"[Baca selengkapnya]({b['url']})")
 
 elif menu == "Data & EDA":
     tahun = st.selectbox("**Pilih Tahun**", [2020, 2021, 2022, 2023])
@@ -328,6 +357,6 @@ elif menu == "Cari Kabupaten":
 st.markdown("""
 <div class="footer">
     Dibuat untuk UAS Machine Learning | K-Means Clustering + PCA | Jawa Barat <br>
-    GitHub: <a href="https://github.com/adiwijaya-086" target="_blank">SampahKita</a>
+    GitHub: <a href="https://github.com/adiwijaya-086" target="_blank">SampahKita123</a>
 </div>
 """, unsafe_allow_html=True)
