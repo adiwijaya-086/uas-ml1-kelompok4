@@ -328,6 +328,6 @@ elif menu == "Cari Kabupaten":
 st.markdown("""
 <div class="footer">
     Dibuat untuk UAS Machine Learning | K-Means Clustering + PCA | Jawa Barat <br>
-    GitHub: <a href="https://github.com/adiwijaya-086" target="_blank">SampahKita123</a>
+    GitHub: <a href="https://github.com/adiwijaya-086" target="_blank">SampahKita</a>
 </div>
 """, unsafe_allow_html=True)
